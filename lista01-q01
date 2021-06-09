@@ -1,0 +1,24 @@
+--Negativos 5
+--Escreva um programa em C++ que recebe 5 valores inteiros da entrada padrão
+--conta quantos destes valores são negativos e imprime esta informação na sada padrão.
+
+#include <iostream>
+using namespace std; 
+int main()
+{
+int positivo=0;
+int negativo=0;
+int valores[5];
+int i;
+ cout<<"Digite 5 números: ";
+for (int i=0; i<5; i++){
+   cin>>valores[i];
+}
+for (int i=0; i<5; i++){  
+  if(valores[i]<0){
+      negativo++;
+}
+  else
+    positivo++;
+}
+cout<<"A quantidade de números negativos é:"<<negativo<<endl<<"e a quantidade de números positivo é:"<<positivo<<endl; 
