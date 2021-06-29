@@ -6,9 +6,11 @@ Por outro lado, se a entrada for 1 -5 o programa deve imprimir na sada padrão o
 
 
 #include <iostream>
-using namespace std;
+using std::cout;
+using std::cin;
+using std::endl;
 
-int main(){
+int main( void ){
 int m;
 int n;
 int i=0;
