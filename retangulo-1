@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+ 
+bool LocalizaPonto(int x1, int y1, int x2, 
+             int y2, int x, int y)
+{
+    if (x > x1 and x < x2 and y > y1 and y < y2){
+        std::cout<<"O ponto esta inserido no retangulo"<<endl;
+    }
+    else if (x == x1 || x == x2 || y == y1 || y == y2){
+        std::cout<<"O ponto encontra-se na borda."<<endl;
+    }
+    else{
+        std::cout<<"O ponto encontra-se fora do retangulo."<<endl;
+    }
+}
+ 
+int main()
+{
+    int x1 = 0, y1 = 0, x2 = 0, y2 = 0, x=0, y=0;
+ std::cout<<"Escreva os pontos X e Y do Ponto Esquerdo Inferior:"<<endl;
+ std::cin >> x1 >>y1;
+ std::cout<<"Escreva os pontos X e Y do Ponto Direito Superior:"<<endl;
+ std::cin >> x2 >>y2;
+ std::cout<<"Escreva os pontos X e Y do Ponto que voce deseja saber se esta inserido no retangulo formado por PEI e PDS:"<<endl;
+ std::cin >> x >>y;
+
+ LocalizaPonto(x1, y1, x2, y2, x, y);
+
+    return 0;
+}
