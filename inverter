@@ -1,0 +1,38 @@
+//Função para inverter posições em um vetor estatico de strings
+#include <iostream>
+
+ int n;
+ int pos_fin= n-1;
+
+void trocar_elementos(int v[], int i, int pos_fin){
+int aux = v[i];
+v[i]=v[pos_fin];
+v[pos_fin]= aux; 
+}
+void inverter(int v[], int n){
+    int i=0;
+    int pos_fin= n-1; // variável que identifica o ultimo elemento do vetor
+
+    while (i<pos_fin){
+        trocar_elementos(v, i, pos_fin);
+        i++, pos_fin--;
+    }
+}
+void mostrar_vetor(int v[], int n){
+    for (int i=0; i<n; i++){
+        std::cout<<" "<<v[i];
+    }
+
+}
+
+//Consegui fazer para reverter se o vetor for de inteiros. Mas quando tendo mudar para string, não deu certo
+//Penso que a ideia seja similar 
+
+int main()
+{
+    int v[]={1,2,3,4,5};
+    mostrar_vetor(v, 5);
+    inverter(v, 5);
+    mostrar_vetor(v, 5);
+    return 0;
+}
