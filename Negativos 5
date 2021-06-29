@@ -3,13 +3,18 @@
 --conta quantos destes valores são negativos e imprime esta informação na sada padrão.
 
 #include <iostream>
-using namespace std; 
-int main()
+using std::cin;
+using std::cout;
+using std::endl;
+
+const int SIZE = 5; // input size.
+
+int main(void)
 {
 int positivo=0;
 int negativo=0;
-int valores[5];
-int i;
+int valores[SIZE];
+
  cout<<"Digite 5 números: ";
 for (int i=0; i<5; i++){
    cin>>valores[i];
@@ -22,3 +27,6 @@ for (int i=0; i<5; i++){
     positivo++;
 }
 cout<<"A quantidade de números negativos é:"<<negativo<<endl<<"e a quantidade de números positivo é:"<<positivo<<endl; 
+
+    return 0;
+}
