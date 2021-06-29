@@ -1,0 +1,35 @@
+//Implemente uma função em C++ chamada fib_below_n que recebe um valor inteiro positivo n e armazena os termos 
+//da série de Fibonacci inferiores a n em um vetor do tipo std::vector. 
+//A função deve então retornar esse objeto usando o comando return. 
+//A classe std::vector representa um tipo de container que faz parte da biblioteca padrão/STL
+//(c++ tem um conjunto de bibliotecas padrão que provêem várias estruturas úteis inexistentes em C)
+//e representa a estrutura de dados lista dinâmica.
+
+#include <iostream>
+int fib_below_n(unsigned int num)
+{
+    if (num == 0 || num == 1)
+    {
+        return num;
+    }
+    else
+    {
+        return (fib_below_n(num - 1) + fib_below_n(num - 2));
+    }
+}
+
+
+int main()
+{
+    int acum = 0; // para armazenar a soma acumulada
+    int n;
+   
+    std::cout << "Escreva um numero N: ";
+    std::cin >> n;
+
+    for (int i = 0;(acum = fib_below_n(i)) < n; i++){ 
+        std::cout << acum << std::endl;                
+    }
+    
+    std::cin.get();
+}
